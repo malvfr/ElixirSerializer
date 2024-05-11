@@ -17,7 +17,7 @@ defmodule ElixirSerializerWeb.Router do
   scope "/", ElixirSerializerWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", SerializerLive
   end
 
   # Other scopes may use custom stacks.
