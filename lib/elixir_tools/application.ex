@@ -9,7 +9,7 @@ defmodule ElixirTools.Application do
   def start(_type, _args) do
     children = [
       ElixirToolsWeb.Telemetry,
-      {DNSCluster, query: Application.get_env(:elixir_serializer, :dns_cluster_query) || :ignore},
+      {DNSCluster, query: Application.get_env(:elixir_tools, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: ElixirTools.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: ElixirTools.Finch},

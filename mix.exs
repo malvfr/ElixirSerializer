@@ -3,7 +3,7 @@ defmodule ElixirTools.MixProject do
 
   def project do
     [
-      app: :elixir_serializer,
+      app: :elixir_tools,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),

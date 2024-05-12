@@ -1,12 +1,12 @@
 defmodule ElixirToolsWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :elixir_serializer
+  use Phoenix.Endpoint, otp_app: :elixir_tools
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_elixir_serializer_key",
+    key: "_elixir_tools_key",
     signing_salt: "lxuxSdSD",
     same_site: "Lax"
   ]
@@ -19,7 +19,7 @@ defmodule ElixirToolsWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :elixir_serializer,
+    from: :elixir_tools,
     gzip: false,
     only: ElixirToolsWeb.static_paths()
 

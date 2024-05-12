@@ -7,11 +7,11 @@
 # General application configuration
 import Config
 
-config :elixir_serializer,
+config :elixir_tools,
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
-config :elixir_serializer, ElixirToolsWeb.Endpoint,
+config :elixir_tools, ElixirToolsWeb.Endpoint,
   url: [host: "localhost"],
   adapter: Phoenix.Endpoint.Cowboy2Adapter,
   render_errors: [
@@ -28,7 +28,7 @@ config :elixir_serializer, ElixirToolsWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :elixir_serializer, ElixirTools.Mailer, adapter: Swoosh.Adapters.Local
+config :elixir_tools, ElixirTools.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,
