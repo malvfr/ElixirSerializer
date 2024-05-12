@@ -1,4 +1,4 @@
-defmodule ElixirSerializerWeb.Telemetry do
+defmodule ElixirToolsWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -63,7 +63,7 @@ defmodule ElixirSerializerWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {ElixirSerializerWeb, :count_users, []}
+      # {ElixirToolsWeb, :count_users, []}
     ]
   end
 end

@@ -1,5 +1,5 @@
-defmodule ElixirSerializerWeb.ErrorHTML do
-  use ElixirSerializerWeb, :html
+defmodule ElixirToolsWeb.ErrorHTML do
+  use ElixirToolsWeb, :html
 
   # If you want to customize your error pages,
   # uncomment the embed_templates/1 call below

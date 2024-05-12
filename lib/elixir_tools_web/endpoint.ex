@@ -1,4 +1,4 @@
-defmodule ElixirSerializerWeb.Endpoint do
+defmodule ElixirToolsWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :elixir_serializer
 
   # The session will be stored in the cookie and signed,
@@ -21,7 +21,7 @@ defmodule ElixirSerializerWeb.Endpoint do
     at: "/",
     from: :elixir_serializer,
     gzip: false,
-    only: ElixirSerializerWeb.static_paths()
+    only: ElixirToolsWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -46,5 +46,5 @@ defmodule ElixirSerializerWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug ElixirSerializerWeb.Router
+  plug ElixirToolsWeb.Router
 end

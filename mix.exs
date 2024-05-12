@@ -1,4 +1,4 @@
-defmodule ElixirSerializer.MixProject do
+defmodule ElixirTools.MixProject do
   use Mix.Project
 
   def project do
@@ -18,7 +18,7 @@ defmodule ElixirSerializer.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {ElixirSerializer.Application, []},
+      mod: {ElixirTools.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

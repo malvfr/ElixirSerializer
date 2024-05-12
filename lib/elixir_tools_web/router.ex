@@ -1,11 +1,11 @@
-defmodule ElixirSerializerWeb.Router do
-  use ElixirSerializerWeb, :router
+defmodule ElixirToolsWeb.Router do
+  use ElixirToolsWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, html: {ElixirSerializerWeb.Layouts, :root}
+    plug :put_root_layout, html: {ElixirToolsWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,14 +14,14 @@ defmodule ElixirSerializerWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ElixirSerializerWeb do
+  scope "/", ElixirToolsWeb do
     pipe_through :browser
 
     live "/", SerializerLive
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ElixirSerializerWeb do
+  # scope "/api", ElixirToolsWeb do
   #   pipe_through :api
   # end
 
@@ -37,7 +37,7 @@ defmodule ElixirSerializerWeb.Router do
     scope "/dev" do
       pipe_through :browser
 
-      live_dashboard "/dashboard", metrics: ElixirSerializerWeb.Telemetry
+      live_dashboard "/dashboard", metrics: ElixirToolsWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end

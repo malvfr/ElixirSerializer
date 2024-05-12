@@ -1,4 +1,4 @@
-defmodule ElixirSerializerWeb.CoreComponents do
+defmodule ElixirToolsWeb.CoreComponents do
   @moduledoc """
   Provides core UI components.
 
@@ -651,9 +651,9 @@ defmodule ElixirSerializerWeb.CoreComponents do
     # uncommenting and adjusting the following code:
 
     # if count = opts[:count] do
-    #   Gettext.dngettext(ElixirSerializerWeb.Gettext, "errors", msg, msg, count, opts)
+    #   Gettext.dngettext(ElixirToolsWeb.Gettext, "errors", msg, msg, count, opts)
     # else
-    #   Gettext.dgettext(ElixirSerializerWeb.Gettext, "errors", msg, opts)
+    #   Gettext.dgettext(ElixirToolsWeb.Gettext, "errors", msg, opts)
     # end
 
     Enum.reduce(opts, msg, fn {key, value}, acc ->

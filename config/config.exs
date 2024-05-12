@@ -11,14 +11,14 @@ config :elixir_serializer,
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
-config :elixir_serializer, ElixirSerializerWeb.Endpoint,
+config :elixir_serializer, ElixirToolsWeb.Endpoint,
   url: [host: "localhost"],
   adapter: Phoenix.Endpoint.Cowboy2Adapter,
   render_errors: [
-    formats: [html: ElixirSerializerWeb.ErrorHTML, json: ElixirSerializerWeb.ErrorJSON],
+    formats: [html: ElixirToolsWeb.ErrorHTML, json: ElixirToolsWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: ElixirSerializer.PubSub,
+  pubsub_server: ElixirTools.PubSub,
   live_view: [signing_salt: "wY2faie7"]
 
 # Configures the mailer
@@ -28,7 +28,7 @@ config :elixir_serializer, ElixirSerializerWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :elixir_serializer, ElixirSerializer.Mailer, adapter: Swoosh.Adapters.Local
+config :elixir_serializer, ElixirTools.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,
